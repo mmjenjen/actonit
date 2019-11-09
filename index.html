@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Welcome to Act On It</title>
+
+
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+	<link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="css/themes/actonit.css" />
+	<!-- our stylesheet needs to go last in order to see our colors everywhere! -->
+
+</head>
+<body>
+
+<!-- Page 1: HOME -->
+<div data-role="page" id="welcome">
+
+	<center><div data-role="content">
+        <h1>Welcome to <br> Act On It!</h1>
+
+        <!-- /header -->
+<img class="popphoto" src="src/fist.png" style="max-height:512px;" alt="Act On It icon, a fist">
+	<ul data-role="listview" data-inset="true">
+    <a href="#explore" class="ui-btn ui-corner-all">Explore</a>
+    <a href="#mailbox" class="ui-btn ui-corner-all">Mailbox</a>
+    <a href="#settings" class="ui-btn ui-corner-all">Settings</a>
+
+	</ul><!-- /content -->
+
+        </div> </center>
+
+
+				    <div data-role="footer">
+						<center><a href="#feedback" data-rel="popup" data-position-to="window" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-mail ui-btn-icon-left ui-btn-a" data-transition="pop">Feedback</a></center>
+						<div data-role="popup" id="feedback" data-theme="a" class="ui-corner-all">
+				    	<form>
+				        <div style="padding:10px 20px;">
+				            <h2>Submit your feedback</h2>
+				            <label for="un" class="ui-hidden-accessible">Your email:</label>
+				            <input type="text" name="user" id="un" value="" placeholder="username@home.com" data-theme="a">
+				            <label for="fb" class="ui-hidden-accessible">Feedback:</label>
+				            <input type="text" name="feed" id="pw" value="" placeholder="I suggest that Act On It..." data-theme="a">
+				            <button type="submit" class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-btn-icon-left ui-icon-check">Submit</button>
+				        </div>
+				    		</form>
+							</div>
+				      </div><!-- /footer -->
+
+</div><!-- /page -->
+
+
+<!-- Page 2: EXPLORE -->
+<div data-role="page" id="explore">
+
+	<div data-role="header">
+		<div data-role="navbar">
+			<ul>
+				<li><a data-icon="back" data-rel="back" back-btn="true">Back</a></li>
+				<li><a href="#welcome" data-icon="home">Home</a></li>
+				<li><a href="#explore" class="ui-btn-active" data-icon="grid">Explore</a></li>
+				<li><a href="#mailbox"  data-icon="mail">Mailbox</a></li>
+			</ul>
+		</div><!-- /navbar -->
+		<h1>Explore</h1>
+	</div><!-- /header -->
+
+	<div data-role="content">
+    <center><h2>Explore <br>By Category</h2></center>
+
+		<form>
+    <input data-type="search" placeholder="Search categories..." id="categories">
+		</form>
+   <center> <div class="ui-grid-b ui-responsive" data-filter="true" data-input="#categories">
+        <a href="#lgbtq" class="ui-btn ui-btn-inline ui-shadow ui-btn ui-corner-all">LGBTQ</a>
+        <a href="#" class="ui-btn ui-btn-inline ui-shadow ui-btn ui-corner-all">Cultures</a>
+        <a href="#" class="ui-btn ui-btn-inline ui-shadow ui-btn ui-corner-all">Racism</a>
+        <a href="#" class="ui-btn ui-btn-inline ui-shadow ui-btn ui-corner-all">Athletics</a>
+        <a href="#" class="ui-btn ui-btn-inline ui-shadow ui-btn ui-corner-all">Economic Class</a>
+        <a href="#" class="ui-btn ui-btn-inline ui-shadow ui-btn ui-corner-all">Sustainability</a>
+        <a href="#" class="ui-btn ui-btn-inline ui-shadow ui-btn ui-corner-all">College Gov</a>
+        <a href="#" class="ui-btn ui-btn-inline ui-shadow ui-btn ui-corner-all">Societies</a>
+        <a href="#" class="ui-btn ui-btn-inline ui-shadow ui-btn ui-corner-all">Other</a>
+     </div></center>
+
+	 </div><!-- end of content -->
+    </div><!-- /page -->
+
+		<!-- Page 3: MAILBOX -->
+		<div data-role="page" id="mailbox">
+			<div data-role="header">
+				<div data-role="navbar">
+					<ul>
+						<li><a data-icon="back" data-rel="back" back-btn="true">Back</a></li>
+						<li><a href="#welcome" data-icon="home">Home</a></li>
+						<li><a href="#explore" data-icon="grid">Explore</a></li>
+						<li><a href="#mailbox" class="ui-btn-active" data-icon="mail">Mailbox</a></li>
+					</ul>
+				</div><!-- /navbar -->
+				<h1>Mailbox</h1>
+			</div><!-- /header -->
+
+			<div data-role="content">
+				<a href="#sendmessage" class="ui-btn">Send a message?</a>
+				<ul data-role="listview" data-inset="true" data-divider-theme="a">
+		    	<li data-role="list-divider">Notifications</li>
+		    	<li><b>Counterpoint</b> posted a new task: "Supporters needed to help print and distribute posters for Counterpoint fundraiser." RSVP required.</li>
+		    	<li><b>Japan Club</b> posted a new task: "Need volunteers for Yuki Matsuri. RSVP if you can make it!"</li>
+					<li><b>The Agora Society</b> posted: "Fundraiser to raise money for #neveragain. Bikes will be sold for $25. Tickets on Eventbrite."</li>
+				</ul>
+			</div><!-- /content -->
+		</div><!-- /page -->
+
+		<!-- Page 4: SEND MESSAGE -->
+		<div data-role="page" id="sendmessage">
+			<div data-role="header">
+				<div data-role="navbar">
+					<ul>
+						<li><a data-icon="back" data-rel="back" back-btn="true">Back</a></li>
+						<li><a href="#welcome" data-icon="home">Home</a></li>
+						<li><a href="#explore" data-icon="grid">Explore</a></li>
+						<li><a href="#mailbox" class="ui-btn-active" data-icon="mail">Mailbox</a></li>
+					</ul>
+				</div><!-- /navbar -->
+				<h1>Send a Message</h1>
+			</div><!-- /header -->
+
+			<div data-role="content">
+				<form id="sendmessageform">
+					<div class="ui-field-contain">
+						<label for="select-native-fc">Send to:</label>
+		    		<select name="select-native-fc" id="select-native-fc">
+							<option>Supporter Groups</option>
+		        	<option value="small">All Users</option>
+		        	<option value="medium">Aiko Supporters</option>
+		    		</select>
+						<br>
+						<label for="select-choice-a" class="select">Send on behalf of:</label>
+						<select name="select-choice-a" id="select-choice-a" data-native-menu="false">
+		    			<option>Your Orgs</option>
+		    			<option value="standard">Wellesley Aiko</option>
+						</select>
+						<br>
+						<label for="textarea-1">Type your message:</label>
+		    		<textarea name="textarea-1" id="textarea-1"></textarea>
+					</div>
+					<a href="#popupBasic" data-rel="popup" class="ui-btn ui-corner-all ui-shadow" data-transition="pop">Ask question</a>
+					<div data-role="popup" id="popupBasic">
+						<p>Thanks for your message!</p>
+					</div>
+				</form>
+			</div><!-- /content -->
+		</div><!-- /page -->
+
+			<!-- Page 5: LGBTQ -->
+			<div data-role="page" id="lgbtq">
+			    <div data-role="header">
+					<div data-role="navbar">
+						<ul>
+							<li><a data-icon="back" data-rel="back" back-btn="true">Back</a></li>
+							<li><a href="#welcome" data-icon="home">Home</a></li>
+							<li><a href="#explore" class="ui-btn-active" data-icon="grid">Explore</a></li>
+							<li><a href="#mailbox" data-icon="mail">Mailbox</a></li>
+						</ul>
+					</div><!-- /navbar -->
+					<h1> LGBTQ </h1>
+			    </div><!-- /header -->
+
+			    <center>
+			<div data-role="content">
+							<a href="#learnmore" class="ui-btn">Want to learn more about LGBTQ Topics?</a>
+     <h2> General Causes </h2>
+     <ul data-role="listview" data-inset="true">
+     <div data-role="collapsible-set" data-theme="c" data-content-theme="d">
+         <div data-role="collapsible">
+             <h1>Cause #1</h1>
+             <p> Insert information about cause #1.</p>
+         </div>
+         <div data-role="collapsible">
+             <h1>Cause #2</h1>
+             <p> Insert information about cause #2.</p>
+         </div>
+
+     <h3> Orgs </h3>
+     <div data-role="collapsible">
+         <h1>SAGA</h1>
+         <p> <b>Sexuality and Gender Alliance (SAGA)</b> is an org for all Wellesley students within the LGBTQIA+ community and those questioning their sexual/romantic orientation or gender identity. Its specific focus is on support, advocacy and political action for the wider LGBTQIA+ community. Recent events range from “How Do I Talk To My Family About Race?” a community conversation strategizing how to talk to white family members in the wake of the election, to Lesbian Movie Night screening D.E.B.S. in conjunction with the English Department.</p>
+				 <a href="#" onclick="addToList('SAGA')">Subscribe</a>
+     </div>
+     <div data-role="collapsible">
+         <h1>BlackOut</h1>
+         <p><b>blackOUT </b> serves to create an inclusive and safe space for all students of African descent at Wellesley who identify as LGBTQIA+. The organization aims to provide a tangible community for black queer and trans students, both on campus as well as in the greater Boston community, and serves as a support system on a personal, social and academic level.</p>
+				 <a href="#" onclick="addToList('BlackOut')">Subscribe</a>
+		 </div>
+     <div data-role="collapsible">
+         <h1>Tea Talks</h1>
+         <p><b>Tea Talks</b> is a closed social-support group for LGBTQIA+ siblings of Pan-Asian descent. It meets weekly to create community space to explore, question and affirm collective and individual experiences.</p>
+				 <a href="#" onclick="addToList('Tea Talks')">Subscribe</a>
+		 </div>
+	 </div><!-- end of collapsible set-->
+	 </div><!--close content -->
+				</center>
+
+<script>
+	function addToList(thing){
+		console.log('clicked!!')
+		console.log(thing);
+		$("#notifslist").append('<li><a href="#"><h3>'+thing+'</h3></a><a href="#confirm" class="delete ui-btn ui-btn-icon-notext ui-icon-delete" title="Delete"></a></li>');
+		alert("You have subscribed to notifications from " + thing + ". You can change this in your Settings.")
+	}
+</script>
+	</div><!-- /page -->
+
+		<!-- Page 6: LEARN MORE -->
+		<div data-role="page" id="learnmore">
+			<div data-role="header">
+				<div data-role="navbar">
+					<ul>
+						<li><a data-icon="back" data-rel="back" back-btn="true">Back</a></li>
+						<li><a href="#welcome" data-icon="home">Home</a></li>
+						<li><a href="#explore" class="ui-btn-active" data-icon="grid">Explore</a></li>
+						<li><a href="#mailbox" data-icon="mail">Mailbox</a></li>
+					</ul>
+				</div><!-- /navbar -->
+				<h1>Learn More</h1>
+			</div><!-- /header -->
+
+			<div data-role="content">
+				<h1>LGBTQ Topics</h1>
+				<h3>Want to learn more about...</h3>
+				<div data-role="collapsible">
+		    	<h4>Being an ally</h4>
+		    	<p>I'm the collapsible content. By default I'm closed, but you can click the header to open me.</p>
+				</div>
+				<div data-role="collapsible">
+		    	<h4>Experiences on campus</h4>
+		    	<p>I'm the collapsible content. By default I'm closed, but you can click the header to open me.</p>
+				</div>
+
+				<h3>Want to ask a question?</h3>
+				<a href="#" class="ui-shadow ui-btn ui-corner-all">View previously answered questions</a>
+				<form>
+					<label for="textarea" class="ui-hidden-accessible">Textarea:</label>
+					<textarea cols="40" rows="8" name="textarea" id="textarea" placeholder="Text input"></textarea>
+					<a href="#popupBasic" data-rel="popup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline" data-transition="pop">Ask question</a>
+					<div data-role="popup" id="popupBasic">
+						<p>Thanks for your question! We'll let you know when it's answered.</p>
+					</div>
+				</form>
+			</div><!-- /content -->
+		</div><!-- /page -->
+
+		<!-- Page 7: SETTINGS -->
+		<div data-role="page" id="settings">
+			<div data-role="header">
+				<div data-role="navbar">
+					<ul>
+						<li><a data-icon="back" data-rel="back" back-btn="true">Back</a></li>
+						<li><a href="#welcome" data-icon="home">Home</a></li>
+						<li><a href="#explore" data-icon="grid">Explore</a></li>
+						<li><a href="#mailbox" data-icon="mail">Mailbox</a></li>
+					</ul>
+				</div><!-- /navbar -->
+				<h1>Settings</h1>
+			</div><!-- /header -->
+
+			<div data-role="content">
+				<label for="select-choice-mini" class="select">View as:</label>
+				<select name="select-choice-mini" id="select-choice-mini" data-mini="true" data-inline="true">
+		    	<option value="organizer">Organizer</option>
+		    	<option value="supporter">Supporter</option>
+				</select>
+				<br>
+				<br>
+				<ul data-role="listview">
+		    	<li><a href="#">Name</a></li>
+		    	<li><a href="#">Username</a></li>
+		    	<li><a href="#">Email</a></li>
+		    	<li><a href="#notifications">Notifications</a></li>
+		    	<li><a href="#">Support</a></li>
+					<li><a href="#">Privacy</a></li>
+					<li><a href="#">Reset Password</a></li>
+					<li><a href="#">Logout</a></li>
+				</ul>
+			</div><!-- /content -->
+		</div><!-- /page -->
+
+		<!-- Page 8: NOTIFICATIONS -->
+		<div data-role="page" id="notifications">
+			<div data-role="header">
+				<div data-role="navbar">
+					<ul>
+						<li><a data-icon="back" data-rel="back" back-btn="true">Back</a></li>
+						<li><a href="#welcome" data-icon="home">Home</a></li>
+						<li><a href="#explore" data-icon="grid">Explore</a></li>
+						<li><a href="#mailbox" data-icon="mail">Mailbox</a></li>
+					</ul>
+				</div><!-- /navbar -->
+				<h1>Notification Settings</h1>
+			</div><!-- /header -->
+
+			<div data-role="content">
+				<p>View and change your notifications.</p>
+				<br>
+				<ul data-role="listview" id="notifslist">
+				</ul>
+			</div><!-- /content -->
+		</div><!-- /page -->
+
+
+</body>
+</html>
